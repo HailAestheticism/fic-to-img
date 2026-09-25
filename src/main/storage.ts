@@ -51,8 +51,7 @@ export function getDataDir(): string {
     const m = appPath.match(/[\\/]out[\\/]main[\\/]?$/)
     dataDirCache = join(m ? appPath.slice(0, m.index) : appPath, 'data')
   } else {
-    // 便携版每次解压到临时目录，只有 PORTABLE_EXECUTABLE_DIR 才是用户放 exe 的位置
-    const base = process.env.PORTABLE_EXECUTABLE_DIR ?? dirname(app.getPath('exe'))
+    const base = dirname(app.getPath('exe'))
     const sideBySide = join(base, 'data')
     try {
       mkdirSync(sideBySide, { recursive: true })

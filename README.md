@@ -12,7 +12,6 @@
 前往 [Releases](https://github.com/HailAestheticism/fic-to-img/releases) 下载：
 
 - `文转条图-Setup-x.y.z.exe`：安装版
-- `文转条图-x.y.z-便携版.exe`：便携版，免安装
 
 支持 Windows 10/11 x64。安装包未做代码签名，SmartScreen 首次可能提示「未知发布者」，选择「更多信息 → 仍要运行」即可。
 

@@ -26,7 +26,6 @@ win:
   icon: resources/icon.ico
   target:
     - nsis
-    - portable
 
 nsis:
   oneClick: false
@@ -35,6 +34,3 @@ nsis:
   createDesktopShortcut: true
   shortcutName: 文转条图
   artifactName: ${productName}-Setup-${version}.${ext}
-
-portable:
-  artifactName: ${productName}-${version}-便携版.${ext}
