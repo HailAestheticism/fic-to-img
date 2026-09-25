@@ -1,0 +1,16 @@
+node_modules/
+out/
+dist/
+release/
+*.log
+.DS_Store
+*.tsbuildinfo
+
+# 用户文档数据不入库
+data/
+
+# agent 本地验证脚本目录
+.verify/
+
+# 验证实例误生成的 Electron 用户数据目录（路径拼接丢失分隔符）
+/*.verifyudata*/

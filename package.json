@@ -1,0 +1,50 @@
+{
+  "name": "fic-to-img",
+  "version": "1.0.0",
+  "description": "文转条图（fic to img）：纯本地单机的长文转条图工具，流式编辑 + 分章节 + 自由排版 + 高清分页导出",
+  "main": "./out/main/index.js",
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json",
+    "typecheck:web": "vue-tsc --noEmit -p tsconfig.web.json",
+    "typecheck": "npm run typecheck:node && npm run typecheck:web",
+    "dist": "npm run build && electron-builder --win",
+    "dist:dir": "npm run build && electron-builder --win --dir"
+  },
+  "dependencies": {
+    "@tiptap/extension-image": "^3.0.0",
+    "@tiptap/extension-table": "^3.0.0",
+    "@tiptap/extension-text-align": "^3.0.0",
+    "@tiptap/extension-text-style": "^3.0.0",
+    "@tiptap/extensions": "^3.0.0",
+    "@tiptap/starter-kit": "^3.0.0",
+    "@tiptap/vue-3": "^3.0.0",
+    "archiver": "^7.0.1",
+    "fabric": "^6.7.1",
+    "node-forge": "^1.4.0",
+    "pinia": "^3.0.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6.0.3",
+    "@types/node": "^22.15.0",
+    "@types/node-forge": "^1.3.14",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "electron": "^37.0.0",
+    "electron-builder": "^26.15.3",
+    "electron-vite": "^3.1.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5",
+    "vue-tsc": "^2.2.10"
+  },
+  "allowScripts": {
+    "electron@37.10.3": true,
+    "esbuild@0.25.12": true
+  }
+}

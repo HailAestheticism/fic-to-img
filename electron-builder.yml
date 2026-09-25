@@ -1,0 +1,40 @@
+appId: com.local.fic-to-img
+productName: 文转条图
+copyright: 本地单机应用，无联网组件
+
+directories:
+  output: release
+  buildResources: resources
+
+asar: true
+
+# 默认收集全部文件，只排除开发期产物（node_modules 由 electron-builder 单独处理）
+files:
+  - '!data/**'
+  - '!release/**'
+  - '!src/**'
+  - '!vibe_images/**'
+  - '!resources/icon-*.png'
+  - '!*.md'
+  - '!*.png'
+  - '!tsconfig*.json'
+  - '!tsconfig*.tsbuildinfo'
+  - '!electron.vite.config.ts'
+  - '!.export-test/**'
+
+win:
+  icon: resources/icon.ico
+  target:
+    - nsis
+    - portable
+
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  shortcutName: 文转条图
+  artifactName: ${productName}-Setup-${version}.${ext}
+
+portable:
+  artifactName: ${productName}-${version}-便携版.${ext}
