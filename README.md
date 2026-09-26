@@ -7,6 +7,8 @@
 
 > 面向同人文作者的纯本地长文转条图工具：流式长文编辑，分章节排版，一键导出高清长图。
 
+网页版 [https://hailaestheticism.github.io/fic-to-img-web/](https://hailaestheticism.github.io/fic-to-img-web/)
+
 ## 下载
 
 前往 [Releases](https://github.com/HailAestheticism/fic-to-img/releases) 下载：
